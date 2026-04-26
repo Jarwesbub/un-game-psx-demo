@@ -3,8 +3,8 @@ local one = FixedPoint.new(1)
 function onCreate(self)
     -- Make sure we have control of the camera
     Camera.FollowPsxPlayer(false)
-    local pos = Vec3.new(12,12,-14)
-    local rot = Vec3.new(44, 0, 0)
+    local pos = Vec3.new(0,4,-20)
+    local rot = Vec3.new(0, 0, 0)
 
     setCameraByTransform(pos,rot)
 end

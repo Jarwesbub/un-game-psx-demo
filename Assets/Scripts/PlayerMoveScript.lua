@@ -5,7 +5,7 @@ local two = FixedPoint.new(2)
 local invSqrt2 = FixedPoint.new(7071) / 10000 -- ≈ 0.7071
 
 local directionIndex = 0 -- 0=forward, 4=backward
-local step = one / 128
+local step = one / 256
 
 local isCoolDown = false
 local coolDownSteps = zero
@@ -37,15 +37,8 @@ local rotations = {
 
 function onCreate(self)
     player = Entity.Find("PlayerModel")
-
-    local clip = SkinnedAnim.GetClip("PlayerModel")
-    if clip == "idle" then
-        Debug.Log("Idle foound")
-    else
-        Debug.Log("Idle not found")
-    end
-    
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
+
 end
 
 function onUpdate(self, dt)
