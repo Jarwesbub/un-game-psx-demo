@@ -69,7 +69,6 @@ function onCreate(self)
     player = Entity.Find("PlayerModel")
     maxPosA = Entity.Find("PointA")
     minPosB = Entity.Find("PointB")
-    Debug.Log("Player: " .. Player)
     setPlayerRotation()
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
 end
@@ -144,7 +143,8 @@ function movePlayer(isForward)
     -- Set new player position.
     pos.x = pos.x + x * step
     pos.z = pos.z + z * step
-    Entity.SetPosition(player, pos)
+    Entity.SetPosition(player, pos) --- Set new Player position
+    Player.SetPosition(pos)         -- Set the PSXObject position (trigger detection).
 end
 
 function onButtonPress(self, button)

@@ -24,11 +24,11 @@ function onCreate(self)
     local fow = 280 -- Unity FOV: 55
     Camera.SetH(fow)
     Debug.Log("Camera FOV: " .. fow)
-    setCameraByTransform(pos, rot)
+    setCameraPosition(pos, rot)
 end
 
 -- Set camera position and rotation from the Unity Transform data.
-function setCameraByTransform(pos, rot)
+function setCameraPosition(pos, rot)
     local decimal = one / 100
     local rotDiff = rot.x / 2 -- 1.96
     local posX = decimal * pos.x
@@ -41,6 +41,8 @@ function setCameraByTransform(pos, rot)
     Camera.SetPosition(Vec3.new(posX, posY, posZ))
     Camera.SetRotation(Vec3.new(rotX, rotY, rotZ))
 
-    Debug.Log("Camera position set: " .. posX .. ", " .. posY .. ", " .. posZ)
-    Debug.Log("Camera rotation set: " .. rotX .. ", " .. rotY .. ", " .. rotZ)
+    --Debug.Log("Camera position set: " .. posX .. ", " .. posY .. ", " .. posZ)
+    --Debug.Log("Camera rotation set: " .. rotX .. ", " .. rotY .. ", " .. rotZ)
 end
+
+_G.setCameraPosition = setCameraPosition -- Create public function.
