@@ -1,46 +1,81 @@
 -- Math calculations:
 local zero = FixedPoint.new(0)
 local one = FixedPoint.new(1)
-local hundreds = FixedPoint.new(1) / 100
+local hundredth = FixedPoint.new(1) / 100
 
 local rotationY = 360 -- Player's current angle
 local moveSpeed = one / 256
 
 local player = Entity.Find("PlayerModel")
 
+local maxPosA = Entity.Find("PointA") -- Player's max position
+local minPosB = Entity.Find("PointB") -- Player's min position
+
 -- Tenths of Sines values between 10-90 degrees.
 local sinTenths = {
-    hundreds * 17, -- [0] 0.17 -> 10°
-    hundreds * 34, -- [1] 0.34 -> 20°
-    hundreds * 50, -- [2] 0.5  -> 30°
-    hundreds * 64, -- [3] 0.64 -> 40°
-    hundreds * 77, -- [4] 0.77 -> 50°
-    hundreds * 87, -- [5] 0.87 -> 60°
-    hundreds * 94, -- [6] 0.94 -> 70°
-    hundreds * 98, -- [7] 0.98 -> 80°
-    one,           -- [8] 1    -> 90°
+    hundredth * 17, -- [0] 0.17 -> 10°
+    hundredth * 34, -- [1] 0.34 -> 20°
+    hundredth * 50, -- [2] 0.5  -> 30°
+    hundredth * 64, -- [3] 0.64 -> 40°
+    hundredth * 77, -- [4] 0.77 -> 50°
+    hundredth * 87, -- [5] 0.87 -> 60°
+    hundredth * 94, -- [6] 0.94 -> 70°
+    hundredth * 98, -- [7] 0.98 -> 80°
+    one,            -- [8] 1    -> 90°
 }
 
 -- Tenths of Cosines values between 10-90 degrees.
 local cosTenths = {
-    hundreds * 98, -- [0] 0.98 -> 10°
-    hundreds * 94, -- [1] 0.94 -> 20°
-    hundreds * 87, -- [2] 0.87 -> 30°
-    hundreds * 77, -- [3] 0.77 -> 40°
-    hundreds * 64, -- [4] 0.64 -> 50°
-    hundreds * 50, -- [5] 0.5  -> 60°
-    hundreds * 34, -- [6] 0.34 -> 70°
-    hundreds * 17, -- [7] 0.17 -> 80°
-    zero,          -- [8] 0    -> 90°
+    hundredth * 98, -- [0] 0.98 -> 10°
+    hundredth * 94, -- [1] 0.94 -> 20°
+    hundredth * 87, -- [2] 0.87 -> 30°
+    hundredth * 77, -- [3] 0.77 -> 40°
+    hundredth * 64, -- [4] 0.64 -> 50°
+    hundredth * 50, -- [5] 0.5  -> 60°
+    hundredth * 34, -- [6] 0.34 -> 70°
+    hundredth * 17, -- [7] 0.17 -> 80°
+    zero,           -- [8] 0    -> 90°
+}
+
+-- NOTE: Negative sin/cos values are for the optimization (onUpdate runs more stable).
+
+-- Negative Tenths of Sines values between 10-90 degrees.
+local sinTenthsNeg = {
+    -hundredth * 17, -- [0] -0.17 -> 10°
+    -hundredth * 34, -- [1] -0.34 -> 20°
+    -hundredth * 50, -- [2] -0.5  -> 30°
+    -hundredth * 64, -- [3] -0.64 -> 40°
+    -hundredth * 77, -- [4] -0.77 -> 50°
+    -hundredth * 87, -- [5] -0.87 -> 60°
+    -hundredth * 94, -- [6] -0.94 -> 70°
+    -hundredth * 98, -- [7] -0.98 -> 80°
+    -one,            -- [8] -1    -> 90°
+}
+
+-- Negative Tenths of Cosines values between 10-90 degrees.
+local cosTenthsNeg = {
+    -hundredth * 98, -- [0] -0.98 -> 10°
+    -hundredth * 94, -- [1] -0.94 -> 20°
+    -hundredth * 87, -- [2] -0.87 -> 30°
+    -hundredth * 77, -- [3] -0.77 -> 40°
+    -hundredth * 64, -- [4] -0.64 -> 50°
+    -hundredth * 50, -- [5] -0.5  -> 60°
+    -hundredth * 34, -- [6] -0.34 -> 70°
+    -hundredth * 17, -- [7] -0.17 -> 80°
+    zero,            -- [8] 0    -> 90°
 }
 
 function onCreate(self)
     player = Entity.Find("PlayerModel")
+    maxPosA = Entity.Find("PointA")
+    minPosB = Entity.Find("PointB")
+    Debug.Log("Player: " .. Player)
     setPlayerRotation()
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
 end
 
 function onUpdate(self, dt)
+    -- Player rotate:
     if Input.IsHeld(Input.LEFT) then
         rotationY = rotationY - 10
         if rotationY <= 0 then rotationY = 360 end
@@ -51,6 +86,7 @@ function onUpdate(self, dt)
         setPlayerRotation()
     end
 
+    -- Player move:
     if Input.IsHeld(Input.UP) then
         movePlayer(true)
     elseif Input.IsHeld(Input.DOWN) then
@@ -66,7 +102,7 @@ end
 function movePlayer(isForward)
     local x = zero
     local z = zero
-    local index = (rotationY / 10)
+    local index = rotationY / 10 -- rotation / 10
 
     if rotationY <= 90 then
         x = sinTenths[index]
@@ -74,34 +110,51 @@ function movePlayer(isForward)
     elseif rotationY <= 180 then
         index = index - 9
         x = cosTenths[index]
-        z = -sinTenths[index]
+        z = sinTenthsNeg[index]
     elseif rotationY <= 270 then
         index = index - 18
-        x = -sinTenths[index]
-        z = -cosTenths[index]
+        x = sinTenthsNeg[index]
+        z = cosTenthsNeg[index]
     else
         index = index - 27
-        x = -cosTenths[index]
+        x = cosTenthsNeg[index]
         z = sinTenths[index]
     end
 
-    Debug.Log("Index: " .. index .. " Angle: " .. rotationY)
-
+    -- Direction
     local step = moveSpeed
-    if not isForward then step = -moveSpeed / 2 end
+    if not isForward then
+        x = -x
+        z = -z
+        step = moveSpeed / 2
+    end
 
-    local forward = Vec3.new(x, zero, z)
-    local newPos = Vec3.mul(forward, step)
-    Entity.SetPosition(player, Vec3.add(player.position, newPos))
+    local pos = player.position
+    local maxPos = maxPosA.position
+    local minPos = minPosB.position
+
+    -- Clamp movement based on maxPos and minPos transform positions.
+    if (pos.x > maxPos.x and x > zero) or (pos.x < minPos.x and x < zero) then
+        x = zero
+    end
+    if (pos.z > maxPos.z and z > zero) or (pos.z < minPos.z and z < zero) then
+        z = zero
+    end
+
+    -- Set new player position.
+    pos.x = pos.x + x * step
+    pos.z = pos.z + z * step
+    Entity.SetPosition(player, pos)
 end
 
 function onButtonPress(self, button)
     -- Player animations:
-    if button == Input.UP or button == Input.DOWN then
+    if button == Input.UP then
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
-    elseif button == Input.CROSS then
-        -- Run speed.
-        moveSpeed = one / 128
+        -- Set moveSpeed:
+        if button == Input.CROSS then moveSpeed = one / 128 end
+    elseif button == Input.DOWN then
+        SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
     end
 end
 
