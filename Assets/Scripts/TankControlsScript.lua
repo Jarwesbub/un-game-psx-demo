@@ -8,8 +8,9 @@ local moveSpeed = one / 256
 
 local player = Entity.Find("PlayerModel")
 
-local maxPosA = Entity.Find("PointA") -- Player's max position
-local minPosB = Entity.Find("PointB") -- Player's min position
+local minPosB = Entity.Find("PointA") -- Player's min position
+local maxPosA = Entity.Find("PointB") -- Player's max position
+
 
 -- Tenths of Sines values between 10-90 degrees.
 local sinTenths = {
@@ -67,8 +68,8 @@ local cosTenthsNeg = {
 
 function onCreate(self)
     player = Entity.Find("PlayerModel")
-    maxPosA = Entity.Find("PointA")
-    minPosB = Entity.Find("PointB")
+    minPosB = Entity.Find("PointA")
+    maxPosA = Entity.Find("PointB")
     setPlayerRotation()
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
 end

@@ -32,7 +32,7 @@ function onUpdate(self, dt)
 end
 
 function onButtonRelease(self, button)
-    if button == Input.LEFT or button == Input.RIGHT or button == Input.UP or button == Input.DOWN then
+    if button == Input.SQUARE or button == Input.CIRCLE or button == Input.TRIANGLE or button == Input.CROSS then
         local newRot = Camera.GetRotation()
         Debug.Log("Camera rotation: " .. newRot.x .. ", " .. newRot.y .. ", " .. newRot.z)
     end
