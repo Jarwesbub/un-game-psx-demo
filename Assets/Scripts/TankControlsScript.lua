@@ -3,7 +3,7 @@ local zero = FixedPoint.new(0)
 local one = FixedPoint.new(1)
 local hundredth = FixedPoint.new(1) / 100
 
-local rotationY = 360 -- Player's current angle
+local rotationY = 270 -- Player's current angle
 local moveSpeed = one / 256
 
 local player = Entity.Find("PlayerModel")
