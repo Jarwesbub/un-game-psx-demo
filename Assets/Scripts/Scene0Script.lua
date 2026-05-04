@@ -8,13 +8,14 @@ local cameraTransforms = {
     [2] = { pos = { -29, 16, -26 }, rot = { 32, -34, 0 } },
     [3] = { pos = { -35, 13, -5 }, rot = { 16, -81, 0 } },
     [4] = { pos = { -64, 10, -2 }, rot = { 10, 0, 0 } },
+    [5] = { pos = { -66, 2, 11 }, rot = { -11, 180, 0 } },
 }
 
 local boundIndex = -1
 local boundaries = {
     [0] = { min = { x = -12, z = -7 }, max = { x = 9, z = 7 } },
     [1] = { min = { x = -79, z = -14 }, max = { x = -6, z = 14 } },
-    [2] = { min = { x = -79, z = -14 }, max = { x = -55, z = 34 } },
+    [2] = { min = { x = -79, z = -28 }, max = { x = -53, z = 34 } },
 }
 
 function onCreate(self)
@@ -39,7 +40,7 @@ function setCameraPositionById(number)
         boundIndex = 0
     elseif number == 1 or number == 2 then
         boundIndex = 1
-    elseif number == 3 or number == 4 then
+    else
         boundIndex = 2
     end
 
