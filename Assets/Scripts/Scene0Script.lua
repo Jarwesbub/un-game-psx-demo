@@ -18,6 +18,12 @@ local boundaries = {
     [2] = { min = { x = -79, z = -28 }, max = { x = -53, z = 34 } },
 }
 
+-- Note: Don't use negative values in player's rotation.
+local playerSpawnPositions = {
+    [0] = { pos = { x = 7, y = 3, z = 0 }, rotY = 270 },    -- Game start pos.
+    [1] = { pos = { x = -59, y = 3, z = 31 }, rotY = 180 }, -- Cabin door pos.
+}
+
 function onCreate(self)
     Camera.FollowPsxPlayer(false)
     pointA = Entity.Find("PointA")
@@ -25,15 +31,33 @@ function onCreate(self)
     Debug.Log("Scene1Control onCreate()")
     local fow = 280 -- Unity FOV: 55
     Camera.SetH(fow)
-    setCameraPositionById(0)
+
+    local prevScene = Persist.Get("came_from") or -1
+    Debug.Log("PREV SCENE: " .. prevScene)
+    if prevScene == 1 then
+        -- Spawn player at the cabin door.
+        Debug.Log("Player spawns at cabin door")
+        local pos = Vec3.new(playerSpawnPositions[1].pos.x, playerSpawnPositions[1].pos.y, playerSpawnPositions[1].pos.z)
+        local rotY = playerSpawnPositions[1].rotY
+        Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+        setPlayerPosition(pos, rotY)
+        setCameraPositionById(4)
+    else
+        -- Spawn player at the game start position.
+        Debug.Log("Player spawns at start pos")
+        local pos = Vec3.new(playerSpawnPositions[0].pos.x, playerSpawnPositions[0].pos.y, playerSpawnPositions[0].pos.z)
+        local rotY = playerSpawnPositions[0].rotY
+        Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+        setPlayerPosition(pos, rotY)
+        setCameraPositionById(0)
+    end
 end
 
 function setCameraPositionById(number)
     if cameraIndex == number then
         do return end
     end
-    local pos
-    local rot
+
     local prevBoundIndex = boundIndex
 
     if number == 0 then
@@ -47,7 +71,8 @@ function setCameraPositionById(number)
     setCameraPositionByIndex(number)
     cameraIndex = number
 
-    Debug.Log("PrevBound " .. prevBoundIndex .. " current: " .. boundIndex)
+    --Debug.Log("PrevBound " .. prevBoundIndex .. " current: " .. boundIndex)
+    -- Set player boundaries if boundIndex does not match.
     if prevBoundIndex ~= boundIndex then
         setPlayerBoundaries(boundIndex)
     end

@@ -3,7 +3,7 @@ local zero = FixedPoint.new(0)
 local one = FixedPoint.new(1)
 local hundredth = FixedPoint.new(1) / 100
 
-local rotationY = 270 -- Player's current angle
+local rotationY = 0 -- Player's current angle
 local moveSpeed = one / 256
 
 local player = Entity.Find("PlayerModel")
@@ -70,8 +70,27 @@ function onCreate(self)
     player = Entity.Find("PlayerModel")
     minPosB = Entity.Find("PointA")
     maxPosA = Entity.Find("PointB")
+
+    local rot = Entity.GetRotationY(player)
+    local fourth = one - one / 4
+
+    if rot < zero and rot > -one then
+        rotationY = 270
+    elseif rot == zero then
+        rotationY = 360
+    elseif rot > zero and rot < fourth then
+        rotationY = 90
+    else
+        rotationY = 180
+    end
+
     setPlayerRotation()
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
+end
+
+function setPlayerRotation()
+    local rot = one * rotationY / 180
+    Entity.SetRotationY(player, rot) -- Rotate object.
 end
 
 function onUpdate(self, dt)
@@ -92,11 +111,6 @@ function onUpdate(self, dt)
     elseif Input.IsHeld(Input.DOWN) then
         movePlayer(false)
     end
-end
-
-function setPlayerRotation()
-    local rot = one * rotationY / 180
-    Entity.SetRotationY(player, rot) -- Rotate object.
 end
 
 function movePlayer(isForward)
