@@ -171,6 +171,13 @@ function onButtonPress(self, button)
     elseif button == Input.DOWN then
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
     end
+
+    -- TEST DELETE:
+    -- BUG: Sounds are not playing at all in current build:!!
+    if button == Input.CROSS then
+        Debug.Log("PRESS X")
+        Audio.Play("door_open_sound", 100, 64)
+    end
 end
 
 function onButtonRelease(self, button)

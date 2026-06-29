@@ -8,7 +8,7 @@ local one = FixedPoint.new(1)
 local DEG_TO_PI = one / 180
 local hundredth = one / 100
 
-function setPlayerPosition(pos, rotY)
+function setGlobalPlayerPosition(pos, rotY)
     local posX = hundredth * pos.x
     local posY = hundredth * -pos.y
     local posZ = hundredth * pos.z
@@ -18,7 +18,8 @@ function setPlayerPosition(pos, rotY)
     Entity.SetPosition(player, Vec3.new(posX, posY, posZ))
     Entity.SetRotationY(player, rotYPI)
 
-    Debug.Log("setPlayerPosition var: " .. posX .. ", " .. posY .. ", " .. posZ)
+    --Debug.Log("setGlobalPlayerPosition: " .. posX .. ", " .. posY .. ", " .. posZ)
+    --Debug.Log("setGlobalPlayerRotation: " .. rotYPI)
 end
 
-_G.setPlayerPosition = setPlayerPosition
+_G.setGlobalPlayerPosition = setGlobalPlayerPosition

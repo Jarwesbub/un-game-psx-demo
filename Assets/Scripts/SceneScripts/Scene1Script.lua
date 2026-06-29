@@ -36,11 +36,12 @@ function onCreate(self)
     Debug.Log("PREV SCENE: " .. prevScene)
     if prevScene == 1 then
         -- Spawn player at the cabin door.
+        Audio.Play("door_close_sound", 127, 64)
         Debug.Log("Player spawns at cabin door")
         local pos = Vec3.new(playerSpawnPositions[1].pos.x, playerSpawnPositions[1].pos.y, playerSpawnPositions[1].pos.z)
         local rotY = playerSpawnPositions[1].rotY
         Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-        setPlayerPosition(pos, rotY)
+        setGlobalPlayerPosition(pos, rotY)
         setCameraPositionById(4)
     else
         -- Spawn player at the game start position.
@@ -48,7 +49,7 @@ function onCreate(self)
         local pos = Vec3.new(playerSpawnPositions[0].pos.x, playerSpawnPositions[0].pos.y, playerSpawnPositions[0].pos.z)
         local rotY = playerSpawnPositions[0].rotY
         Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-        setPlayerPosition(pos, rotY)
+        setGlobalPlayerPosition(pos, rotY)
         setCameraPositionById(0)
     end
 end

@@ -1,12 +1,9 @@
 function onInteract(self)
-    local currentScene = Scene.GetIndex()
-
-    if currentScene == 0 then -- Enter cabin.
-        Persist.Set("came_from", 0)
-        Scene.Load(1)
-    end
-    if currentScene == 1 then -- Get out of cabin.
-        Persist.Set("came_from", 1)
-        Scene.Load(0)
+    local hasKey = Persist.Get("has_key") or 0
+    if hasKey == 1 then
+        Debug.Log("Action: Gate opened")
+        Scene.Load(3)
+    else
+        Debug.Log("Player has no key!")
     end
 end
