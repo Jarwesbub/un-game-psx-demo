@@ -183,6 +183,8 @@ function onButtonPress(self, button)
     if button == Input.SELECT then
         Debug.Log("LOADED NEXT SCENE")
         local scene = Scene.GetIndex() + 1
+        if scene == 4 then return end
+        Audio.PauseCDDA()
         Scene.Load(scene)
     end
 end

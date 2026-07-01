@@ -8,6 +8,8 @@ function onInteract(self)
     if not isInDialogue() then
         if isKeyPicked == -1 then
             -- Key is already used.
+            Audio.Play("gate_open", 100, 64)
+            Audio.PauseCDDA()
             Scene.Load(3)
             return
         end
@@ -24,6 +26,7 @@ function playerStartDialogue()
         startDialogue({ '"The door is locked."', "I need a key to open it." })
     else
         Debug.Log("Player has a key!")
+        Audio.Play("gate_unlock", 127, 64)
         Interact.SetEnabled(self, true)
         isKeyPicked = -1 -- Key is used to the door.
         Persist.Set("has_key", -1)

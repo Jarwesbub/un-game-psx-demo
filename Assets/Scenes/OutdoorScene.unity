@@ -837,11 +837,12 @@ Transform:
   m_GameObject: {fileID: 387735519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.38272, y: 0, z: -20.60919}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146702138}
+  - {fileID: 1682868413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &441295617
@@ -2710,73 +2711,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &1146702137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1146702138}
-  - component: {fileID: 1146702140}
-  - component: {fileID: 1146702139}
-  m_Layer: 0
-  m_Name: Door_sound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1146702138
+--- !u!4 &1146702138 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+  m_PrefabInstance: {fileID: 4945641311616676691}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146702137}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387735520}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1146702139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146702137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
-  ClipName: door_close_sound
-  Clip: {fileID: 8300000, guid: 9e951c23578b9864a98de725033d10a8, type: 3}
-  SampleRate: 22050
-  Loop: 0
-  DefaultVolume: 100
---- !u!114 &1146702140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146702137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
-  ClipName: door_open_sound
-  Clip: {fileID: 8300000, guid: 5e13d58c862186343a6cc07486a3b21d, type: 3}
-  SampleRate: 22050
-  Loop: 0
-  DefaultVolume: 100
 --- !u!1001 &1196463646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4257,6 +4196,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
   size: {x: 2, y: 2, z: 6}
   luaFile: {fileID: 271950057456261835, guid: 51c46115081c84d4096219296b1ac884, type: 3}
+--- !u!1 &1682868412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682868413}
+  - component: {fileID: 1682868414}
+  - component: {fileID: 1682868415}
+  m_Layer: 0
+  m_Name: Gate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1682868413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682868412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 387735520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682868414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682868412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
+  ClipName: gate_open
+  Clip: {fileID: 8300000, guid: e1bbfb9df93acc84e82420516b09880a, type: 3}
+  SampleRate: 22050
+  Loop: 0
+  DefaultVolume: 100
+--- !u!114 &1682868415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682868412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
+  ClipName: gate_unlock
+  Clip: {fileID: 8300000, guid: c672f2c4ea7a36a4ca75c6aa5bfe35f9, type: 3}
+  SampleRate: 22050
+  Loop: 0
+  DefaultVolume: 100
 --- !u!1 &1735829573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,6 +5460,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
+--- !u!1001 &4945641311616676691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 387735520}
+    m_Modifications:
+    - target: {fileID: 458005416832401868, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_Name
+      value: DoorSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5468,5 +5531,5 @@ SceneRoots:
   - {fileID: 1015361162}
   - {fileID: 193519037}
   - {fileID: 487941951}
-  - {fileID: 387735520}
   - {fileID: 573973802023088364}
+  - {fileID: 387735520}

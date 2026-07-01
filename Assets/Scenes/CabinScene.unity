@@ -645,7 +645,7 @@ Transform:
   - {fileID: 181097246}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &776464096
+--- !u!1 &865151177
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -653,65 +653,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 776464097}
-  - component: {fileID: 776464099}
-  - component: {fileID: 776464098}
+  - component: {fileID: 865151178}
+  - component: {fileID: 865151179}
   m_Layer: 0
-  m_Name: Door_sound
+  m_Name: KeyPick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &776464097
+--- !u!4 &865151178
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776464096}
+  m_GameObject: {fileID: 865151177}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1176540345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &776464098
+--- !u!114 &865151179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776464096}
+  m_GameObject: {fileID: 865151177}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
-  ClipName: door_close_sound
-  Clip: {fileID: 8300000, guid: 9e951c23578b9864a98de725033d10a8, type: 3}
+  ClipName: key_pick
+  Clip: {fileID: 8300000, guid: 66aa50788f406c14aaad9c2204aa291d, type: 3}
   SampleRate: 22050
   Loop: 0
-  DefaultVolume: 100
---- !u!114 &776464099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776464096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da2803235be654438e86fe9d9a954d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXAudioClip
-  ClipName: door_open_sound
-  Clip: {fileID: 8300000, guid: 5e13d58c862186343a6cc07486a3b21d, type: 3}
-  SampleRate: 22050
-  Loop: 0
-  DefaultVolume: 100
+  DefaultVolume: 80
 --- !u!1 &994852376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1062,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 776464097}
+  - {fileID: 1454674068}
+  - {fileID: 865151178}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1258561187
@@ -1349,6 +1332,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374486478}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1454674067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1176540345}
+    m_Modifications:
+    - target: {fileID: 458005416832401868, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_Name
+      value: DoorSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.93341
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.15957
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+--- !u!4 &1454674068 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909838108315553315, guid: 79a8dfa0791f8404fafbf47cc9fdc651, type: 3}
+  m_PrefabInstance: {fileID: 1454674067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1540627141
 GameObject:
   m_ObjectHideFlags: 0

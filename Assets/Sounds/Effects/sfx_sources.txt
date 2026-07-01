@@ -1,0 +1,3 @@
+DoorOpen, DoorClose by qubodup: https://opengameart.org/content/door-open-door-close
+items, lock_open: https://opengameart.org/content/100-cc0-sfx-2
+Noisy Metal Door: https://freesound.org/people/Olichite/sounds/238891/

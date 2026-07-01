@@ -1,0 +1,47 @@
+CDDA Audio fix instructions by Pasquale "Pasqui indistry".
+____________________________________________________________________
+
+Pasquale's instructions were copied here to keep all the code changes in check.
+This fixes temporarily the CDDA audio track crash when changing a Scene while track is playing.
+
+___________________________________________________________________
+Copied from the Bandwidth Discord:
+
+I currently found a fix, but it requires modifying both psxsplash and psyqo source code
+
+In psxsplash::FileLoaderCDRom::LoadFileSync, located inside src\fileloader_cdrom.hh
+Before bool ok = m_cdrom.readSectorsBlocking(entry.LBA, sectors, buf, *m_gpu);
+Add
+while (m_cdrom.isDriveBlocked())
+{
+    m_gpu->pumpCallbacks();
+}
+
+
+In psxsplash\third_party\nugget\psyqo\cdrom-device.hh
+Add
+bool isDriveBlocked();
+
+I added it near line 267, near readSectorsBlocking with the other public functions
+
+in psxsplash\third_party\nugget\psyqo\src\cdrom-device-readsectors.cpp
+Add this code at the end of the line
+bool psyqo::CDRomDevice::isDriveBlocked() {
+    return m_callback != nullptr;   
+}
+
+
+In your lua, remember to pause before changing scene
+Audio.PauseCDDA()
+Scene.Load(2)
+
+
+This is a temporary solution made without a good knowing on how exactly the code is structured and how the psx hardware works. I've a little bit of experience, but this surely isn't a permanent solution
+
+_________
+
+Fix "Audio not working in 2.2.3 hotfix version.
+Sum up info from the user Quilt in Discord (Bandwidth):
+
+Open scenemanager.cpp in Assets\psxsplash\src
+In line 48, remove "m_audio.init();"
