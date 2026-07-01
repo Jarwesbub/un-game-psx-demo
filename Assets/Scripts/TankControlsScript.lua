@@ -94,6 +94,9 @@ function setPlayerRotation()
 end
 
 function onUpdate(self, dt)
+    -- Don't move while dialogue is active.
+    if isInDialogue() then return end
+
     -- Player rotate:
     if Input.IsHeld(Input.LEFT) then
         rotationY = rotationY - 10
@@ -163,6 +166,9 @@ function movePlayer(isForward)
 end
 
 function onButtonPress(self, button)
+    -- Don't move while dialogue is active.
+    if isInDialogue() then return end
+
     -- Player animations:
     if button == Input.UP then
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
@@ -174,9 +180,10 @@ function onButtonPress(self, button)
 
     -- TEST DELETE:
     -- BUG: Sounds are not playing at all in current build:!!
-    if button == Input.CROSS then
-        Debug.Log("PRESS X")
-        Audio.Play("door_open_sound", 100, 64)
+    if button == Input.SELECT then
+        Debug.Log("LOADED NEXT SCENE")
+        local scene = Scene.GetIndex() + 1
+        Scene.Load(scene)
     end
 end
 

@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXSceneExporter
   GTEScaling: 100
-  SceneLuaFile: {fileID: 0}
+  SceneLuaFile: {fileID: 271950057456261835, guid: 5ccd09e800fef18448ec886422277cbe, type: 3}
   FogColor: {r: 0, g: 0, b: 0, a: 1}
   FogEnabled: 0
   FogDensity: 5
@@ -1139,6 +1139,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &1367059712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2853617671927445256, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_Name
+      value: PlayerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2672.7559
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 267.9472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222370653174744116, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
 --- !u!1 &1374486478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,7 +2129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXInteractable
   interactionRadius: 4
-  interactButton: 14
+  interactButton: 13
   isRepeatable: 1
   cooldownFrames: 30
   showPrompt: 0
@@ -2449,3 +2546,4 @@ SceneRoots:
   - {fileID: 2093997818}
   - {fileID: 1176540345}
   - {fileID: 2023327702}
+  - {fileID: 1367059712}
