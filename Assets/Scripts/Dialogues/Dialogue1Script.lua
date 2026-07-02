@@ -7,7 +7,7 @@ end
 function onInteract(self)
     -- Key is not picked.
     if isStarted == 0 then
-        startDialogue({ "The moon is shining so bright.", "The wind is chilling." })
+        startDialogue({ "The moon is shining so bright.", "There's a chill in the wind." })
         isStarted = 1
     else
         advanceDialogue()

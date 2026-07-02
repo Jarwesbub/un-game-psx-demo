@@ -178,15 +178,17 @@ function onButtonPress(self, button)
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
     end
 
-    -- TEST DELETE:
-    -- BUG: Sounds are not playing at all in current build:!!
-    if button == Input.SELECT then
-        Debug.Log("LOADED NEXT SCENE")
-        local scene = Scene.GetIndex() + 1
-        if scene == 4 then return end
-        Audio.PauseCDDA()
-        Scene.Load(scene)
+    if button == Input.CROSS then
+        moveSpeed = one / 192
     end
+
+    -- Level skip button for testing:
+    --if button == Input.SELECT then
+    --    local scene = Scene.GetIndex() + 1
+    --    if scene == 4 then return end
+    --    Audio.PauseCDDA()
+    --   Scene.Load(scene)
+    --end
 end
 
 function onButtonRelease(self, button)
@@ -195,6 +197,10 @@ function onButtonRelease(self, button)
         SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
     elseif button == Input.CROSS then
         -- Walk speed.
+        moveSpeed = one / 256
+    end
+
+    if button == Input.CROSS then
         moveSpeed = one / 256
     end
 end
