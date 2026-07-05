@@ -1,0 +1,25 @@
+UnGame Tech demo:
+______________________
+Game and 3d models developed by JarwesBub
+Game build in PSXSplash: https://psxsplash.github.io/
+______________________
+
+Sound sources:
+Door open/close sfx by qubodup: https://opengameart.org/content/door-open-door-close
+Lock open sfx by rubberduck: https://opengameart.org/content/100-cc0-sfx-2
+Metal door open sfx by Olichite: https://freesound.org/people/Olichite/sounds/238891/
+______________________
+
+Music by Tsorthan Grove:
+Lanterns in the Hollowed Forest: https://opengameart.org/content/lanterns-in-the-hollowed-forest
+Osmotic Memory: https://opengameart.org/content/osmotic-memory
+The World That Fell Silent: https://opengameart.org/content/the-world-fell-silent
+______________________
+
+Textures all (some are not used in the final demo):
+Screaming Brain Studios: https://opengameart.org/content/horror-texture-pack ; https://opengameart.org/content/tiny-texture-pack-1
+drummyfish: https://opengameart.org/content/big-pack-of-hand-painted-tiling-textures
+Lewis W. Veasey: https://opengameart.org/content/double-door-school
+Luke.RUSTLTD: https://opengameart.org/node/8776
+Luke.RUSTLTD: https://opengameart.org/content/metal-grate-texture
+Onsemeliot: https://opengameart.org/content/vaious-vegetation-sprites

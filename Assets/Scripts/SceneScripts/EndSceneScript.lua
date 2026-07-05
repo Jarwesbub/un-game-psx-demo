@@ -3,7 +3,7 @@ function onCreate(self)
     local pos = Vec3.new(0, 0, 0)
     setCameraPosition(pos, pos)
     -- Play background music.
-    Audio.PlayCDDA(4, 1)
+    Audio.PlayCDDA(5, 1)
 end
 
 function onButtonPress(self, button)

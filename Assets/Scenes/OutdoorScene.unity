@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
   isActive: 1
-  bitDepth: 4
+  bitDepth: 8
   luaFile: {fileID: 0}
   collisionType: 0
   vertexColorMode: 0
