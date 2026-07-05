@@ -11,3 +11,5 @@ The project was made using the PSXSplash development tools:
 
 https://psxsplash.github.io/
 _______________________________________________________________________________
+
+You can play the demo on a modded PlayStation 1 or in a PS1 emulator. The latest build is available in [latest releases]([https://www.neocortex.link/](https://github.com/Jarwesbub/un-game-psx-demo/releases/latest)).
