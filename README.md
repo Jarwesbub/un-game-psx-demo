@@ -12,4 +12,10 @@ The project was made using the PSXSplash development tools:
 https://psxsplash.github.io/
 _______________________________________________________________________________
 
+**Gameplay video:**
+
+[UnGame - PlayStation 1 Tech Demo](https://www.youtube.com/watch?v=_Me_-hYNynA)
+
+_______________________________________________________________________________
+
 You can play the demo on a modded PlayStation 1 or in a PS1 emulator. The latest build can be downloaded [here](https://github.com/Jarwesbub/un-game-psx-demo/releases/latest).
