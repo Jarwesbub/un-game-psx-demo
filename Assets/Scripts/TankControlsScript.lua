@@ -38,34 +38,6 @@ local cosTenths = {
     zero,           -- [8] 0    -> 90°
 }
 
--- NOTE: Negative sin/cos values are for the optimization (onUpdate runs more stable).
-
--- Negative Tenths of Sines values between 10-90 degrees.
-local sinTenthsNeg = {
-    -hundredth * 17, -- [0] -0.17 -> 10°
-    -hundredth * 34, -- [1] -0.34 -> 20°
-    -hundredth * 50, -- [2] -0.5  -> 30°
-    -hundredth * 64, -- [3] -0.64 -> 40°
-    -hundredth * 77, -- [4] -0.77 -> 50°
-    -hundredth * 87, -- [5] -0.87 -> 60°
-    -hundredth * 94, -- [6] -0.94 -> 70°
-    -hundredth * 98, -- [7] -0.98 -> 80°
-    -one,            -- [8] -1    -> 90°
-}
-
--- Negative Tenths of Cosines values between 10-90 degrees.
-local cosTenthsNeg = {
-    -hundredth * 98, -- [0] -0.98 -> 10°
-    -hundredth * 94, -- [1] -0.94 -> 20°
-    -hundredth * 87, -- [2] -0.87 -> 30°
-    -hundredth * 77, -- [3] -0.77 -> 40°
-    -hundredth * 64, -- [4] -0.64 -> 50°
-    -hundredth * 50, -- [5] -0.5  -> 60°
-    -hundredth * 34, -- [6] -0.34 -> 70°
-    -hundredth * 17, -- [7] -0.17 -> 80°
-    zero,            -- [8] 0    -> 90°
-}
-
 function onCreate(self)
     player = Entity.Find("PlayerModel")
     minPosB = Entity.Find("PointA")
@@ -127,14 +99,14 @@ function movePlayer(isForward)
     elseif rotationY <= 180 then
         index = index - 9
         x = cosTenths[index]
-        z = sinTenthsNeg[index]
+        z = -sinTenths[index]
     elseif rotationY <= 270 then
         index = index - 18
-        x = sinTenthsNeg[index]
-        z = cosTenthsNeg[index]
+        x = -sinTenths[index]
+        z = -cosTenths[index]
     else
         index = index - 27
-        x = cosTenthsNeg[index]
+        x = -cosTenths[index]
         z = sinTenths[index]
     end
 
