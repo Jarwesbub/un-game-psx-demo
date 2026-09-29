@@ -12,7 +12,7 @@ The project was made using the PSXSplash development tools:
 https://psxsplash.github.io/
 _______________________________________________________________________________
 
-![UnGame Screenshot 1](Screenshots/ungame_demo_thumbnail_1.png)
+![UnGame img](Screenshots/ungame_demo_thumbnail_collection.png)
 
 _______________________________________________________________________________
 

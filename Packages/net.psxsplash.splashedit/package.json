@@ -1,0 +1,8 @@
+{
+  "name": "net.psxsplash.splashedit",
+  "version": "2.3.0",
+  "displayName": "Splashedit",
+  "description": "Splashedit is a Unity package for the psxsplash PlayStation 1 engine.",
+  "unity": "6000.0",
+  "_fingerprint": "ed84fd29e04f809f4d986ff791c0a4d9"
+}

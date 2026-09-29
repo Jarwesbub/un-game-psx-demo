@@ -1,0 +1,19 @@
+{
+    "name": "net.psxsplash.splashedit.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8c4dd21966739024fbd72155091d199e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "DotRecast.Core.dll",
+        "DotRecast.Recast.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

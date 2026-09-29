@@ -679,6 +679,7 @@ MonoBehaviour:
     rgba: 4286611584
   smoothNormals: 1
   isPlatform: 0
+  uvOffsetMaterial: 0
 --- !u!23 &994852379
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -828,6 +829,7 @@ MonoBehaviour:
     rgba: 4286611584
   smoothNormals: 1
   isPlatform: 0
+  uvOffsetMaterial: 0
 --- !u!1 &1093864886
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +886,7 @@ MonoBehaviour:
     rgba: 4286611584
   smoothNormals: 1
   isPlatform: 0
+  uvOffsetMaterial: 0
 --- !u!23 &1093864889
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1576,6 +1579,7 @@ MonoBehaviour:
     rgba: 4286611584
   smoothNormals: 1
   isPlatform: 0
+  uvOffsetMaterial: 0
 --- !u!23 &1540627143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1704,6 +1708,7 @@ MonoBehaviour:
     rgba: 4286611584
   smoothNormals: 1
   isPlatform: 0
+  uvOffsetMaterial: 0
 --- !u!23 &1762781033
 MeshRenderer:
   m_ObjectHideFlags: 0
