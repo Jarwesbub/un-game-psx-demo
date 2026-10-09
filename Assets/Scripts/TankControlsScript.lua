@@ -9,8 +9,6 @@ local player = Entity.Find("PlayerModel")
 
 function onCreate(self)
     player = Entity.Find("PlayerModel")
-    minPosB = Entity.Find("PointA")
-    maxPosA = Entity.Find("PointB")
 
     local rot = Entity.GetRotationY(player)
     local fourth = one - one / 4

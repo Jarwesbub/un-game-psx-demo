@@ -1,6 +1,3 @@
---local pointA = Entity.Find("PointA")
---local pointB = Entity.Find("PointB")
-
 local cameraIndex = -1
 local cameraData = {
     [0] = { pos = { -20, 7, 0 }, rot = { 8, 90, 0 } },
@@ -29,9 +26,6 @@ local playerSpawnPositions = {
 
 function onCreate(self)
     Camera.FollowPsxPlayer(false)
-    --pointA = Entity.Find("PointA")
-    --pointB = Entity.Find("PointB")
-
     player = Entity.Find("PlayerModel")
 
     Debug.Log("Scene1Control onCreate()")
