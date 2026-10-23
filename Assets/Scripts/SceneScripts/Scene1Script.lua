@@ -62,7 +62,7 @@ function gabinStartSpawn()
     Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
     setGlobalPlayerPosition(pos, rotY)
     setCameraPositionById(4)
-    Audio.Play("door_close", 127, 64)
+    Audio.Play("door_close")
 end
 
 function setCameraPositionById(number)
@@ -83,17 +83,4 @@ function setCameraPositionByIndex(index)
     local rot = Vec3.new(cameraData[index].rot[1], cameraData[index].rot[2], cameraData[index].rot[3])
     Debug.Log("Cam pos: " .. pos.x .. "," .. pos.y .. "," .. pos.z)
     setCameraPosition(pos, rot)
-end
-
--- DELETE:::
-local hundredth = FixedPoint.new(1) / 100
-function setPlayerBoundsByIndexOLDDD(index)
-    local minPosX = hundredth * boundaryData[index].min.x
-    local minPosZ = hundredth * boundaryData[index].min.z
-    local maxPosX = hundredth * boundaryData[index].max.x
-    local maxPosZ = hundredth * boundaryData[index].max.z
-
-    --Entity.SetPosition(pointA, Vec3.new(minPosX, 0, minPosZ))
-    --Entity.SetPosition(pointB, Vec3.new(maxPosX, 0, maxPosZ))
-    Debug.Log("Boundaries set, min: " + minPosX + ", " + minPosX + " max: " + maxPosX + "," + maxPosZ)
 end

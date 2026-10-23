@@ -21,7 +21,7 @@ function onInteract(self)
         advanceDialogue()
         -- Re-enable interaction when dialogue ends
         if not isInDialogue() then
-            Audio.Play("key_pick", 100, 64)
+            Audio.Play("key_pick")
             Interact.SetEnabled(self, true)
             Entity.SetActive(self, false) -- Hide key.
         end

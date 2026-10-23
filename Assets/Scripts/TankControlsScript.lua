@@ -95,9 +95,9 @@ function onButtonPress(self, button)
     end
 
     -- CONSOLE TEST BUTTON:
-    if button == Input.TRIANGLE then
-        consolePrintGlobalBoundsData()
-    end
+    --if button == Input.TRIANGLE then
+    --consolePrintGlobalBoundsData()
+    --end
 
     -- Level skip button for testing:
     --if button == Input.SELECT then

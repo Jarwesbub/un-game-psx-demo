@@ -3,7 +3,7 @@ function onInteract(self)
 
     Debug.Log("Action: Cabin door opened")
     Audio.PauseCDDA()
-    Audio.Play("door_open", 100, 64)
+    Audio.Play("door_open")
 
     if currentScene == 1 then -- Enter cabin.
         Persist.Set("came_from", 0)
