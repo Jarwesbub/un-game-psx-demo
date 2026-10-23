@@ -5,9 +5,21 @@ local one = FixedPoint.new(1)
 local rotationY = 0 -- Player's current angle
 local moveSpeed = one / 256
 
-local player = Entity.Find("PlayerModel")
+local player
+
+local isPlayerRotationSet = false
 
 function onCreate(self)
+    if not isPlayerRotationSet then
+        initPlayerRotation()
+    end
+
+    setPlayerRotation()
+    SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
+end
+
+function initPlayerRotation()
+    isPlayerRotationSet = true
     player = Entity.Find("PlayerModel")
 
     local rot = Entity.GetRotationY(player)
@@ -22,15 +34,16 @@ function onCreate(self)
     else
         rotationY = 180
     end
-
-    setPlayerRotation()
-    SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
 end
+
+_G.globalInitPlayerRotation = initPlayerRotation
 
 function setPlayerRotation()
     local rot = one * rotationY / 180
     Entity.SetRotationY(player, rot) -- Rotate object.
 end
+
+_G.globalSetPlayerRotation = setPlayerRotation;
 
 function onUpdate(self, dt)
     -- Don't move while dialogue is active.
@@ -95,9 +108,10 @@ function onButtonPress(self, button)
     end
 
     -- CONSOLE TEST BUTTON:
-    --if button == Input.TRIANGLE then
-    --consolePrintGlobalBoundsData()
-    --end
+    if button == Input.TRIANGLE then
+        --consolePrintGlobalBoundsData()
+        print(Entity.GetRotationY(player))
+    end
 
     -- Level skip button for testing:
     --if button == Input.SELECT then
