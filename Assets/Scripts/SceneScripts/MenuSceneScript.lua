@@ -1,4 +1,4 @@
-function onCreate()
+function onCreate(self)
     Persist.Set("came_from", 0)
     Persist.Set("has_key", 0) -- Reset cabin key pick.
     Camera.FollowPsxPlayer(false)

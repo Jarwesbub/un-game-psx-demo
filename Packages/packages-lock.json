@@ -192,7 +192,7 @@
       "url": "https://packages.unity.com"
     },
     "net.psxsplash.splashedit": {
-      "version": "file:D:/tools/Unity/PSXSpash/net.psxsplash.splashedit-2.2.3.tgz",
+      "version": "file:D:/tools/Unity/PSXSpash/net.psxsplash.splashedit-2.4.0.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
