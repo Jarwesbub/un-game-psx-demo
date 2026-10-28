@@ -1,0 +1,15 @@
+After building an emulator in SplashEdit, you get the following error:
+[ERR] Flag could not be matched: pad1type
+[ERR] Run with -help for the list of flags.
+
+How to fix:
+
+Open file "Packages../SplashEdit/Editor/Core/SplashControlPanel.cs"
+
+Edit the line in row 2180:
+In row 2180, remove the "-pad1type dualshock" -text in a string:
+
+string args = $"-exe \"{exePath}\" -run -fastboot -pcdrv -pcdrvbase \"{pcdrvBase}\" -pad1type dualshock -stdout -interpreter"; // Original
+
+To:
+string args = $"-exe \"{exePath}\" -run -fastboot -pcdrv -pcdrvbase \"{pcdrvBase}\" -stdout -interpreter"; // Fixed
