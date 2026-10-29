@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 32}
+  size: {x: 2, y: 2, z: 36}
   luaFile: {fileID: 271950057456261835, guid: bb3884b4ef1ff234cb2c60ecfe496974, type: 3}
 --- !u!1001 &37708336
 PrefabInstance:
@@ -292,6 +292,39 @@ Transform:
   - {fileID: 2124155345}
   - {fileID: 1301828638}
   m_Father: {fileID: 487941951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &150766282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150766283}
+  m_Layer: 0
+  m_Name: Bounds3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150766283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150766282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1574569725}
+  - {fileID: 1480325721}
+  m_Father: {fileID: 495895459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162575195
 GameObject:
@@ -501,7 +534,7 @@ GameObject:
   - component: {fileID: 212009393}
   - component: {fileID: 212009392}
   m_Layer: 0
-  m_Name: boundA
+  m_Name: min
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 228141656}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.67, y: 1, z: -0.11}
+  m_LocalPosition: {x: -19.55, y: 1, z: -0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -646,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 30}
+  size: {x: 18.79, y: 2, z: 30}
   luaFile: {fileID: 271950057456261835, guid: 3745ee610ecf1bf49a1a82c34221b628, type: 3}
 --- !u!1 &335010403
 GameObject:
@@ -1064,6 +1097,7 @@ Transform:
   m_Children:
   - {fileID: 1362830930}
   - {fileID: 1271762427}
+  - {fileID: 150766283}
   - {fileID: 1032668433}
   m_Father: {fileID: 487941951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1077,7 +1111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47
+      value: -43.2
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1085,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1168,14 +1202,9 @@ Transform:
   m_Children:
   - {fileID: 1606017724}
   - {fileID: 228141657}
-  - {fileID: 660202825}
   - {fileID: 642604995}
-  - {fileID: 1977226311}
-  - {fileID: 1673719467}
   - {fileID: 1225311645}
-  - {fileID: 614171692}
   - {fileID: 789315146}
-  - {fileID: 1789358914}
   - {fileID: 20241250}
   m_Father: {fileID: 760901617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1306,52 +1335,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &614171691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 614171692}
-  - component: {fileID: 614171693}
-  m_Layer: 0
-  m_Name: Cam3 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &614171692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614171691}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -69, y: 1, z: 12.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 585029393}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &614171693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614171691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 25}
-  luaFile: {fileID: 271950057456261835, guid: 39f13b3929c0ce84ab1d477dce153193, type: 3}
 --- !u!1 &642604994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1361,7 @@ Transform:
   m_GameObject: {fileID: 642604994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35, y: 1, z: -0.11}
+  m_LocalPosition: {x: -39.72, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1396,54 +1379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 38}
+  size: {x: 19.5, y: 2, z: 30}
   luaFile: {fileID: 271950057456261835, guid: 51c46115081c84d4096219296b1ac884, type: 3}
---- !u!1 &660202824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 660202825}
-  - component: {fileID: 660202826}
-  m_Layer: 0
-  m_Name: Cam1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &660202825
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660202824}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32, y: 1, z: -0.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 585029393}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &660202826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660202824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 38}
-  luaFile: {fileID: 271950057456261835, guid: 3745ee610ecf1bf49a1a82c34221b628, type: 3}
 --- !u!1 &726433306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1394,7 @@ GameObject:
   - component: {fileID: 726433309}
   - component: {fileID: 726433308}
   m_Layer: 0
-  m_Name: boundA
+  m_Name: min
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,7 +1409,7 @@ Transform:
   m_GameObject: {fileID: 726433306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 0, z: -7}
+  m_LocalPosition: {x: -40, y: 0, z: -7}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1568,7 +1505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760901617}
   m_Layer: 0
-  m_Name: Static
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 789315145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -66.84, y: 1, z: 15.11}
+  m_LocalPosition: {x: -66.51, y: 1, z: 17.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1638,7 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 26}
+  size: {x: 2, y: 2, z: 36}
   luaFile: {fileID: 271950057456261835, guid: 029868869b2ebfd42bd891feb3e82a82, type: 3}
 --- !u!1 &868257727
 GameObject:
@@ -1683,31 +1620,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.1
+      value: -58.3
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.03
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.64
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9961947
+      value: 0.99370706
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08715578
+      value: 0.086938135
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.070358165
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0061555444
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1715,7 +1652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1957,7 +1894,7 @@ GameObject:
   - component: {fileID: 972008241}
   - component: {fileID: 972008240}
   m_Layer: 0
-  m_Name: boundA
+  m_Name: min
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2182,7 +2119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032668433}
   m_Layer: 0
-  m_Name: Bounds2
+  m_Name: Bounds4-5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2218,7 +2155,7 @@ GameObject:
   - component: {fileID: 1085552256}
   - component: {fileID: 1085552255}
   m_Layer: 0
-  m_Name: boundB
+  m_Name: max
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2318,120 +2255,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085552253}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1093864886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1093864887}
-  - component: {fileID: 1093864890}
-  - component: {fileID: 1093864889}
-  - component: {fileID: 1093864888}
-  m_Layer: 0
-  m_Name: PointB
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1093864887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093864886}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 7}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960414338}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1093864888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093864886}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
---- !u!23 &1093864889
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093864886}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1093864890
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093864886}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1112862810
 GameObject:
@@ -2706,7 +2529,7 @@ Transform:
   m_GameObject: {fileID: 1225311644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.46, y: 1, z: -2.45}
+  m_LocalPosition: {x: -65.49, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2724,7 +2547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 25}
+  size: {x: 30, y: 2, z: 30}
   luaFile: {fileID: 271950057456261835, guid: 39f13b3929c0ce84ab1d477dce153193, type: 3}
 --- !u!1 &1258561187
 GameObject:
@@ -2761,6 +2584,7 @@ MonoBehaviour:
   FogEnabled: 0
   FogDensity: 5
   SceneType: 1
+  SceneNetworkId: 
   Cutscenes: []
   Animations: []
   LoadingScreenPrefab: {fileID: 5332004826515964687, guid: 6e6883a8097d374418a39c5a4b640e97, type: 3}
@@ -2792,7 +2616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271762427}
   m_Layer: 0
-  m_Name: Bounds1
+  m_Name: Bounds1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2828,7 +2652,7 @@ GameObject:
   - component: {fileID: 1296323225}
   - component: {fileID: 1296323224}
   m_Layer: 0
-  m_Name: boundB
+  m_Name: max
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2843,7 +2667,7 @@ Transform:
   m_GameObject: {fileID: 1296323222}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53, y: 0, z: 34}
+  m_LocalPosition: {x: -52, y: 0, z: 34}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3025,7 +2849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.97
+      value: -29.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3033,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3361,11 +3185,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35
+      value: -28.6
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.4
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3373,19 +3197,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7530058
+      value: 0.7585893
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.105828054
+      value: 0.10661278
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6431277
+      value: -0.636532
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09038569
+      value: 0.089458734
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3393,7 +3217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -81
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3421,6 +3245,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
   m_PrefabInstance: {fileID: 1422195211}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480325720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480325721}
+  - component: {fileID: 1480325724}
+  - component: {fileID: 1480325723}
+  - component: {fileID: 1480325722}
+  m_Layer: 0
+  m_Name: max
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480325721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480325720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 0, z: 34}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 150766283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480325722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480325720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
+  isActive: 1
+  bitDepth: 8
+  luaFile: {fileID: 0}
+  collisionType: 0
+  vertexColorMode: 0
+  flatVertexColor:
+    serializedVersion: 2
+    rgba: 4286611584
+  smoothNormals: 1
+  isPlatform: 0
+  uvOffsetMaterial: 0
+--- !u!23 &1480325723
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480325720}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1480325724
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480325720}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1540627141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,6 +3473,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 193519037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1574569724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574569725}
+  - component: {fileID: 1574569728}
+  - component: {fileID: 1574569727}
+  - component: {fileID: 1574569726}
+  m_Layer: 0
+  m_Name: min
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1574569725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574569724}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -79, y: 0, z: -28}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 150766283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574569726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574569724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
+  isActive: 1
+  bitDepth: 8
+  luaFile: {fileID: 0}
+  collisionType: 0
+  vertexColorMode: 0
+  flatVertexColor:
+    serializedVersion: 2
+    rgba: 4286611584
+  smoothNormals: 1
+  isPlatform: 0
+  uvOffsetMaterial: 0
+--- !u!23 &1574569727
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574569724}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1574569728
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574569724}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1606017723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,7 +3613,7 @@ Transform:
   m_GameObject: {fileID: 1606017723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.52, y: 1, z: -0.11}
+  m_LocalPosition: {x: -6.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3579,7 +3631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 4, y: 2, z: 16}
+  size: {x: 5, y: 2, z: 12.3}
   luaFile: {fileID: 271950057456261835, guid: 6a066d90078b3c145a9ea7d6b49ad8df, type: 3}
 --- !u!1 &1659767972
 GameObject:
@@ -3594,7 +3646,7 @@ GameObject:
   - component: {fileID: 1659767975}
   - component: {fileID: 1659767974}
   m_Layer: 0
-  m_Name: boundB
+  m_Name: max
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3822,52 +3874,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &1673719466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1673719467}
-  - component: {fileID: 1673719468}
-  m_Layer: 0
-  m_Name: Cam2 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1673719467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673719466}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.44, y: 1, z: 13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 585029393}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1673719468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673719466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 6}
-  luaFile: {fileID: 271950057456261835, guid: 51c46115081c84d4096219296b1ac884, type: 3}
 --- !u!1 &1682868412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,6 +3924,7 @@ MonoBehaviour:
   SampleRate: 22050
   Loop: 0
   DefaultVolume: 100
+  TrimLeadingSilence: 0
 --- !u!114 &1682868415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,6 +3942,7 @@ MonoBehaviour:
   SampleRate: 22050
   Loop: 0
   DefaultVolume: 100
+  TrimLeadingSilence: 0
 --- !u!1 &1735829573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4069,166 +4077,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735829573}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1762781030
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762781031}
-  - component: {fileID: 1762781034}
-  - component: {fileID: 1762781033}
-  - component: {fileID: 1762781032}
-  m_Layer: 0
-  m_Name: PointA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1762781031
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762781030}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 0, z: -7}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1960414338}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1762781032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762781030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
---- !u!23 &1762781033
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762781030}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1762781034
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762781030}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1789358913
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1789358914}
-  - component: {fileID: 1789358915}
-  m_Layer: 0
-  m_Name: Cam3 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1789358914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789358913}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -70, y: 1, z: -13.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 585029393}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1789358915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789358913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 22.7}
-  luaFile: {fileID: 271950057456261835, guid: 39f13b3929c0ce84ab1d477dce153193, type: 3}
 --- !u!1001 &1813705118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4239,7 +4087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29
+      value: -23.1
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4251,27 +4099,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9192592
+      value: 0.9105218
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2635933
+      value: 0.24397363
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.28104576
+      value: -0.3224327
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.08058856
+      value: 0.08639559
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -34
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4575,7 +4423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4591,15 +4439,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99539626
+      value: 0.9975641
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.095845714
+      value: 0.06975647
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -11
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 2753696615836594633, guid: 3b719f5d162bfb149ba1fafd578c58af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4668,85 +4516,6 @@ Transform:
   - {fileID: 1867771980}
   m_Father: {fileID: 487941951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1960414337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960414338}
-  m_Layer: 0
-  m_Name: Dynamic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1960414338
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960414337}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1762781031}
-  - {fileID: 1093864887}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1977226310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1977226311}
-  - component: {fileID: 1977226312}
-  m_Layer: 0
-  m_Name: Cam2 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1977226311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1977226310}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -54.93, y: 1, z: -0.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 585029393}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1977226312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1977226310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b9d8d2e8eafba46a30ba345beb9692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXTriggerBox
-  size: {x: 2, y: 2, z: 29}
-  luaFile: {fileID: 271950057456261835, guid: 51c46115081c84d4096219296b1ac884, type: 3}
 --- !u!1 &2119852800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,7 +4573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.98
+      value: -49.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4812,7 +4581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5a8e2f9e3e285b42afa046ecbec00a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5136,7 +4905,6 @@ SceneRoots:
   - {fileID: 162575197}
   - {fileID: 1258561189}
   - {fileID: 2119852801}
-  - {fileID: 1960414338}
   - {fileID: 760901617}
   - {fileID: 2248641457662167756}
   - {fileID: 193519037}
