@@ -532,7 +532,6 @@ GameObject:
   - component: {fileID: 212009391}
   - component: {fileID: 212009394}
   - component: {fileID: 212009393}
-  - component: {fileID: 212009392}
   m_Layer: 0
   m_Name: min
   m_TagString: Untagged
@@ -555,29 +554,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1271762427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &212009392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212009390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &212009393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1392,7 +1368,6 @@ GameObject:
   - component: {fileID: 726433307}
   - component: {fileID: 726433310}
   - component: {fileID: 726433309}
-  - component: {fileID: 726433308}
   m_Layer: 0
   m_Name: min
   m_TagString: Untagged
@@ -1415,29 +1390,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1362830930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &726433308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726433306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &726433309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1892,7 +1844,6 @@ GameObject:
   - component: {fileID: 972008239}
   - component: {fileID: 972008242}
   - component: {fileID: 972008241}
-  - component: {fileID: 972008240}
   m_Layer: 0
   m_Name: min
   m_TagString: Untagged
@@ -1915,29 +1866,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032668433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &972008240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972008238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &972008241
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2153,7 +2081,6 @@ GameObject:
   - component: {fileID: 1085552254}
   - component: {fileID: 1085552257}
   - component: {fileID: 1085552256}
-  - component: {fileID: 1085552255}
   m_Layer: 0
   m_Name: max
   m_TagString: Untagged
@@ -2176,29 +2103,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1362830930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1085552255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085552253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &1085552256
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2650,7 +2554,6 @@ GameObject:
   - component: {fileID: 1296323223}
   - component: {fileID: 1296323226}
   - component: {fileID: 1296323225}
-  - component: {fileID: 1296323224}
   m_Layer: 0
   m_Name: max
   m_TagString: Untagged
@@ -2673,29 +2576,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032668433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1296323224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296323222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &1296323225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3256,7 +3136,6 @@ GameObject:
   - component: {fileID: 1480325721}
   - component: {fileID: 1480325724}
   - component: {fileID: 1480325723}
-  - component: {fileID: 1480325722}
   m_Layer: 0
   m_Name: max
   m_TagString: Untagged
@@ -3279,29 +3158,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 150766283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1480325722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480325720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &1480325723
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3484,7 +3340,6 @@ GameObject:
   - component: {fileID: 1574569725}
   - component: {fileID: 1574569728}
   - component: {fileID: 1574569727}
-  - component: {fileID: 1574569726}
   m_Layer: 0
   m_Name: min
   m_TagString: Untagged
@@ -3507,29 +3362,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 150766283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1574569726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574569724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &1574569727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3644,7 +3476,6 @@ GameObject:
   - component: {fileID: 1659767973}
   - component: {fileID: 1659767976}
   - component: {fileID: 1659767975}
-  - component: {fileID: 1659767974}
   m_Layer: 0
   m_Name: max
   m_TagString: Untagged
@@ -3667,29 +3498,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1271762427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1659767974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659767972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a192e0a30d827ba40be5c99d32a83a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: net.psxsplash.splashedit.Runtime::SplashEdit.RuntimeCode.PSXObjectExporter
-  isActive: 1
-  bitDepth: 8
-  luaFile: {fileID: 0}
-  collisionType: 0
-  vertexColorMode: 0
-  flatVertexColor:
-    serializedVersion: 2
-    rgba: 4286611584
-  smoothNormals: 1
-  isPlatform: 0
-  uvOffsetMaterial: 0
 --- !u!23 &1659767975
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4722,7 +4530,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a7c4df9ad5e12468dfe73c58d7ea98, type: 3}
---- !u!1001 &2248641457662167756
+--- !u!1001 &2999342618544020277
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -4730,59 +4538,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187486823029964963, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1959378467713243673, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
+    - target: {fileID: 7194995106933444957, guid: 3321025e126eb004898baadc4606945f, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6696694459671379286, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
-      propertyPath: LuaFile
-      value: 
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535104098752875495, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f114d4ac3b9b2754ab3b27784b0020a3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3321025e126eb004898baadc4606945f, type: 3}
 --- !u!1001 &4534578097206935700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4906,7 +4710,7 @@ SceneRoots:
   - {fileID: 1258561189}
   - {fileID: 2119852801}
   - {fileID: 760901617}
-  - {fileID: 2248641457662167756}
+  - {fileID: 2999342618544020277}
   - {fileID: 193519037}
   - {fileID: 487941951}
   - {fileID: 573973802023088364}
