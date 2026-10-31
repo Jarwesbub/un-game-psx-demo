@@ -1,3 +1,3 @@
 function onTriggerEnter()
-    setCameraPositionById(1)
+    globalSetCameraPositionById(1)
 end

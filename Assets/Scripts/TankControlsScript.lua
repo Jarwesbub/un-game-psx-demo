@@ -2,48 +2,40 @@
 local zero = FixedPoint.new(0)
 local one = FixedPoint.new(1)
 
-local rotationY = 0 -- Player's current angle
 local moveSpeed = one / 256
-
 local player
 
-local isPlayerRotationSet = false
+-- Rotations use pi-units: 1024 internal units = pi radians = 180 degrees.
+local rotationDegree = 0    -- Player's current rotation degree from 0 to 360.
+local rotationRadian = zero -- Player's current rotation PI-unit from 0 to 2 (where 2=360 degrees).
+
 
 function onCreate(self)
-    if not isPlayerRotationSet then
-        initPlayerRotation()
-    end
-
-    setPlayerRotation()
+    player = Entity.Find("PlayerModel")
+    setPlayerStartRotation()
+    updatePlayerRotation()
     SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
 end
 
-function initPlayerRotation()
-    isPlayerRotationSet = true
-    player = Entity.Find("PlayerModel")
-
+function setPlayerStartRotation()
     local rot = Entity.GetRotationY(player)
     local fourth = one - one / 4
 
     if rot < zero and rot > -one then
-        rotationY = 270
+        rotationDegree = 270
     elseif rot == zero then
-        rotationY = 360
+        rotationDegree = 360
     elseif rot > zero and rot < fourth then
-        rotationY = 90
+        rotationDegree = 90
     else
-        rotationY = 180
+        rotationDegree = 180
     end
 end
 
-_G.globalInitPlayerRotation = initPlayerRotation
-
-function setPlayerRotation()
-    local rot = one * rotationY / 180
-    Entity.SetRotationY(player, rot) -- Rotate object.
+function updatePlayerRotation()
+    rotationRadian = one * rotationDegree / 180
+    Entity.SetRotationY(player, rotationRadian) -- Rotate object.
 end
-
-_G.globalSetPlayerRotation = setPlayerRotation;
 
 function onUpdate(self, dt)
     -- Don't move while dialogue is active.
@@ -51,13 +43,13 @@ function onUpdate(self, dt)
 
     -- Player rotate:
     if Input.IsHeldPlayer1(Input.LEFT) then
-        rotationY = rotationY - 10
-        if rotationY <= 0 then rotationY = 360 end
-        setPlayerRotation()
+        rotationDegree = rotationDegree - 10
+        if rotationDegree <= 0 then rotationDegree = 360 end
+        updatePlayerRotation()
     elseif Input.IsHeldPlayer1(Input.RIGHT) then
-        rotationY = rotationY + 10
-        if rotationY >= 360 then rotationY = 10 end
-        setPlayerRotation()
+        rotationDegree = rotationDegree + 10
+        if rotationDegree >= 360 then rotationDegree = 10 end
+        updatePlayerRotation()
     end
 
     -- Player move:

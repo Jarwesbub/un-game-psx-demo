@@ -5,7 +5,7 @@ function onCreate()
     Audio.Play("door_close")
     local pos = Vec3.new(24, 8, -6)
     local rot = Vec3.new(10, -105, 0)
-    setCameraPosition(pos, rot)
+    globalSetCameraPosition(pos, rot)
     setGlobalPlayerBoundaries(boundaryData[0])
     -- Play background music.
     Audio.PlayCDDA(4)

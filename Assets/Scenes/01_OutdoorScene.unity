@@ -4354,9 +4354,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1839843510}
-  - {fileID: 1374486479}
   - {fileID: 356099246}
   - {fileID: 994852377}
+  - {fileID: 1374486479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2124155344
@@ -4538,6 +4538,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4465084760052191483, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6811627916421474387, guid: 3321025e126eb004898baadc4606945f, type: 3}
+      propertyPath: TargetFPS
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7194995106933444957, guid: 3321025e126eb004898baadc4606945f, type: 3}
       propertyPath: m_Name
       value: Player

@@ -28,7 +28,7 @@ function onCreate(self)
     Camera.FollowPsxPlayer(false)
     player = Entity.Find("PlayerModel")
 
-    Debug.Log("Scene1Control onCreate()")
+    --Debug.Log("Scene1Control onCreate()")
     local fow = 280 -- Unity FOV: 55
     Camera.SetH(fow)
 
@@ -49,8 +49,8 @@ function gameStartSpawn()
     Debug.Log("Player spawns at start pos")
     local pos = Vec3.new(playerSpawnPositions[0].pos.x, playerSpawnPositions[0].pos.y, playerSpawnPositions[0].pos.z)
     local rotY = playerSpawnPositions[0].rotY
-    Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-    setGlobalPlayerPosition(pos, rotY)
+    --Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+    globalSetPlayerPosition(pos, rotY)
     setCameraPositionById(0)
 end
 
@@ -59,8 +59,8 @@ function gabinStartSpawn()
     Debug.Log("Player spawns at cabin door")
     local pos = Vec3.new(playerSpawnPositions[1].pos.x, playerSpawnPositions[1].pos.y, playerSpawnPositions[1].pos.z)
     local rotY = playerSpawnPositions[1].rotY
-    Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-    setGlobalPlayerPosition(pos, rotY)
+    --Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+    globalSetPlayerPosition(pos, rotY)
     setCameraPositionById(4)
     Audio.Play("door_close")
 end
@@ -75,12 +75,12 @@ function setCameraPositionById(number)
     setGlobalPlayerBoundaries(boundaryData[number])
 end
 
-_G.setCameraPositionById = setCameraPositionById
+_G.globalSetCameraPositionById = setCameraPositionById
 
 
 function setCameraPositionByIndex(index)
     local pos = Vec3.new(cameraData[index].pos[1], cameraData[index].pos[2], cameraData[index].pos[3])
     local rot = Vec3.new(cameraData[index].rot[1], cameraData[index].rot[2], cameraData[index].rot[3])
-    Debug.Log("Cam pos: " .. pos.x .. "," .. pos.y .. "," .. pos.z)
-    setCameraPosition(pos, rot)
+    --Debug.Log("Cam pos: " .. pos.x .. "," .. pos.y .. "," .. pos.z)
+    globalSetCameraPosition(pos, rot)
 end

@@ -4,11 +4,10 @@
 -- Field of View: 55
 
 -- In Game view use 4:3 aspect ratio.
-local one = FixedPoint.new(1)
-local DEG_TO_PI = one / 180
-local hundredth = one / 100
+local DEG_TO_PI = FixedPoint.new(1) / 180
+local hundredth = FixedPoint.new(1) / 100
 
-function setGlobalPlayerPosition(pos, rotY)
+function setPlayerPosition(pos, rotY)
     local posX = hundredth * pos.x
     local posY = hundredth * -pos.y
     local posZ = hundredth * pos.z
@@ -22,4 +21,4 @@ function setGlobalPlayerPosition(pos, rotY)
     --Debug.Log("setGlobalPlayerRotation: " .. rotYPI)
 end
 
-_G.setGlobalPlayerPosition = setGlobalPlayerPosition
+_G.globalSetPlayerPosition = setPlayerPosition
