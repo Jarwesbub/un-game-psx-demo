@@ -4,6 +4,7 @@ local one = FixedPoint.new(1)
 
 local moveSpeed = one / 256
 local player
+local playerPosY -- Player's Y-position that never changes.
 
 -- Rotations use pi-units: 1024 internal units = pi radians = 180 degrees.
 local rotationDegree = 0    -- Player's current rotation degree from 0 to 360.
@@ -12,9 +13,16 @@ local rotationRadian = zero -- Player's current rotation PI-unit from 0 to 2 (wh
 
 function onCreate(self)
     player = Entity.Find("PlayerModel")
+    playerPosY = player.position.y
     setPlayerStartRotation()
     updatePlayerRotation()
-    SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
+
+    -- Checks if a button is pressed during load and updates animations.
+    if Input.IsHeldPlayer1(Input.UP) or Input.IsHeldPlayer1(Input.DOWN) then
+        SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
+    else
+        SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
+    end
 end
 
 function setPlayerStartRotation()
@@ -63,7 +71,6 @@ end
 function movePlayer(isForward)
     local position = player.position
     local oldX = position.x
-    local oldY = position.y
     local oldZ = position.z
 
     if isForward then
@@ -75,7 +82,7 @@ function movePlayer(isForward)
     position = player.position
 
     if not isGlobalPlayerInBounds(position) then
-        Entity.SetPosition(player, Vec3.new(oldX, oldY, oldZ))
+        Entity.SetPosition(player, Vec3.new(oldX, playerPosY, oldZ))
         position = player.position
     end
 
@@ -97,12 +104,6 @@ function onButtonPress(self, button)
 
     if button == Input.CROSS then
         moveSpeed = one / 192
-    end
-
-    -- CONSOLE TEST BUTTON:
-    if button == Input.TRIANGLE then
-        --consolePrintGlobalBoundsData()
-        print(Entity.GetRotationY(player))
     end
 
     -- Level skip button for testing:
