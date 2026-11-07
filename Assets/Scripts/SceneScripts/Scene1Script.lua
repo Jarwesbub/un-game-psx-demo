@@ -1,21 +1,21 @@
 local cameraIndex = -1
 local cameraData = {
     [0] = { pos = { -20, 7, 0 }, rot = { 8, 90, 0 } },
-    [1] = { pos = { -47, 12, -20 }, rot = { 20, 53, 0 } },
-    [2] = { pos = { -29, 16, -26 }, rot = { 32, -34, 0 } },
-    [3] = { pos = { -35, 13, -5 }, rot = { 16, -81, 0 } },
-    [4] = { pos = { -64, 10, -2 }, rot = { 10, 0, 0 } },
-    [5] = { pos = { -66, 2, 11 }, rot = { -11, 180, 0 } },
+    [1] = { pos = { -43, 12, -19 }, rot = { 20, 53, 0 } },
+    [2] = { pos = { -23, 16, -26 }, rot = { 30, -39, 0 } },
+    [3] = { pos = { -28, 11, -5 }, rot = { 16, -80, 0 } },
+    [4] = { pos = { -58, 10, -4 }, rot = { 10, -8, 0 } },
+    [5] = { pos = { -66, 2, 11 }, rot = { -8, 180, 0 } },
 }
 
 --local boundIndex = -1
 local boundaryData = {
-    [0] = { min = { x = -12, z = -7 }, max = { x = 9, z = 7 } },
+    [0] = { min = { x = -40, z = -7 }, max = { x = 9, z = 7 } },
     [1] = { min = { x = -79, z = -14 }, max = { x = -6, z = 14 } },
     [2] = { min = { x = -79, z = -14 }, max = { x = -6, z = 14 } },
-    [3] = { min = { x = -79, z = -28 }, max = { x = -53, z = 34 } },
-    [4] = { min = { x = -79, z = -28 }, max = { x = -53, z = 34 } },
-    [5] = { min = { x = -79, z = -28 }, max = { x = -53, z = 34 } },
+    [3] = { min = { x = -79, z = -28 }, max = { x = -40, z = 34 } },
+    [4] = { min = { x = -79, z = -28 }, max = { x = -52, z = 34 } },
+    [5] = { min = { x = -79, z = -28 }, max = { x = -52, z = 34 } },
 }
 
 -- Note: Don't use negative values in player's rotation.
@@ -28,7 +28,7 @@ function onCreate(self)
     Camera.FollowPsxPlayer(false)
     player = Entity.Find("PlayerModel")
 
-    Debug.Log("Scene1Control onCreate()")
+    --Debug.Log("Scene1Control onCreate()")
     local fow = 280 -- Unity FOV: 55
     Camera.SetH(fow)
 
@@ -49,8 +49,8 @@ function gameStartSpawn()
     Debug.Log("Player spawns at start pos")
     local pos = Vec3.new(playerSpawnPositions[0].pos.x, playerSpawnPositions[0].pos.y, playerSpawnPositions[0].pos.z)
     local rotY = playerSpawnPositions[0].rotY
-    Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-    setGlobalPlayerPosition(pos, rotY)
+    --Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+    globalSetPlayerPosition(pos, rotY)
     setCameraPositionById(0)
 end
 
@@ -59,8 +59,8 @@ function gabinStartSpawn()
     Debug.Log("Player spawns at cabin door")
     local pos = Vec3.new(playerSpawnPositions[1].pos.x, playerSpawnPositions[1].pos.y, playerSpawnPositions[1].pos.z)
     local rotY = playerSpawnPositions[1].rotY
-    Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
-    setGlobalPlayerPosition(pos, rotY)
+    --Debug.Log("onCreate player pos: " .. pos.x .. ", " .. pos.y .. ", " .. pos.z)
+    globalSetPlayerPosition(pos, rotY)
     setCameraPositionById(4)
     Audio.Play("door_close")
 end
@@ -75,12 +75,12 @@ function setCameraPositionById(number)
     setGlobalPlayerBoundaries(boundaryData[number])
 end
 
-_G.setCameraPositionById = setCameraPositionById
+_G.globalSetCameraPositionById = setCameraPositionById
 
 
 function setCameraPositionByIndex(index)
     local pos = Vec3.new(cameraData[index].pos[1], cameraData[index].pos[2], cameraData[index].pos[3])
     local rot = Vec3.new(cameraData[index].rot[1], cameraData[index].rot[2], cameraData[index].rot[3])
-    Debug.Log("Cam pos: " .. pos.x .. "," .. pos.y .. "," .. pos.z)
-    setCameraPosition(pos, rot)
+    --Debug.Log("Cam pos: " .. pos.x .. "," .. pos.y .. "," .. pos.z)
+    globalSetCameraPosition(pos, rot)
 end

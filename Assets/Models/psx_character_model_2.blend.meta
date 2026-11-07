@@ -22,7 +22,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -83,7 +83,87 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: psx_character_model_2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: psx_character_model_2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine
+      parentName: Armature
+      position: {x: -0.0009943247, y: -0.5472125, z: -0.000000024423668}
+      rotation: {x: 0.00000007105507, y: 0.84572786, z: 0.5336146, w: 0.000000112615474}
+      scale: {x: 1, y: 0.9999997, z: 1}
+    - name: Leg_left
+      parentName: Spine
+      position: {x: 0.39839664, y: -0.00000059604645, z: -0.000000021822737}
+      rotation: {x: 0.99969625, y: 0.02464609, z: 0.000000064993145, w: -0.0000000016023136}
+      scale: {x: 1.0000015, y: 1.0000004, z: 1}
+    - name: Leg_left_end
+      parentName: Leg_left
+      position: {x: -0, y: 2.1151075, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_right
+      parentName: Spine
+      position: {x: -0.39037916, y: -0.00000059604645, z: 0.00000002061215}
+      rotation: {x: 0.9995964, y: -0.028407345, z: 0.00000026436973, w: 0.000000007513075}
+      scale: {x: 1.0000025, y: 0.99999994, z: 1}
+    - name: Leg_right_end
+      parentName: Leg_right
+      position: {x: -0, y: 2.1175878, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_left
+      parentName: Spine
+      position: {x: 1.3010426e-17, y: 1.7253227, z: 7.070733e-15}
+      rotation: {x: -0.000000033329673, y: 0.000000016809048, z: -0.75590414, w: 0.6546824}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Arm_left
+      parentName: Shoulder_left
+      position: {x: -0.000000067055225, y: 0.6046806, z: -1.7763568e-15}
+      rotation: {x: -0.00000026461282, y: 0.00000089490476, z: 0.05949764, w: 0.99822843}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_left_end
+      parentName: Arm_left
+      position: {x: -0, y: 1.5604075, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_right
+      parentName: Spine
+      position: {x: 1.3010426e-17, y: 1.7253227, z: 7.070733e-15}
+      rotation: {x: 0.00000006405564, y: -0.0000000167779, z: 0.7545035, w: 0.656296}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Arm_right
+      parentName: Shoulder_right
+      position: {x: 0.00000009685754, y: 0.6198979, z: 0}
+      rotation: {x: 0.00000007472935, y: 0.000000024794351, z: -0.05773945, w: 0.99833167}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Arm_right_end
+      parentName: Arm_right
+      position: {x: -0, y: 1.5535891, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Spine
+      position: {x: 1.3010426e-17, y: 1.7253227, z: 7.070733e-15}
+      rotation: {x: -2.8256064e-10, y: -7.1054274e-15, z: 4.2665715e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 1.8439881, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerModel
+      parentName: psx_character_model_2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -94,7 +174,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1

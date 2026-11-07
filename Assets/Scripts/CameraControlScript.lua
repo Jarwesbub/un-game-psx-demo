@@ -24,4 +24,4 @@ function setCameraPosition(pos, rot)
     --Debug.Log("Camera pi-units: " .. rotX .. ", " .. rotY .. ", " .. rotZ)
 end
 
-_G.setCameraPosition = setCameraPosition -- Create public function.
+_G.globalSetCameraPosition = setCameraPosition -- Create public function.
