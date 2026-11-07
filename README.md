@@ -25,7 +25,7 @@ _______________________________________________________________________________
 
 You can play the demo on a modded PlayStation 1 or in a PS1 emulator.
 
-The latest build can be downloaded [here](https://github.com/Jarwesbub/un-game-psx-demo/releases/latest).
+**The latest build can be downloaded [here](https://github.com/Jarwesbub/un-game-psx-demo/releases/latest).**
 
 _______________________________________________________________________________
 
