@@ -26,3 +26,8 @@ _______________________________________________________________________________
 You can play the demo on a modded PlayStation 1 or in a PS1 emulator.
 
 The latest build can be downloaded [here](https://github.com/Jarwesbub/un-game-psx-demo/releases/latest).
+
+*Compatibility Note:*
+This build can be played using an emulator (DuckStation is recommended) or on real PlayStation 1 hardware with a modded console.
+
+Important: When using an emulator, make sure to load the .cue file instead of the .bin file to ensure the background music plays correctly.
