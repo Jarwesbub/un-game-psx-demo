@@ -18,10 +18,6 @@ function setCameraPosition(pos, rot)
 
     Camera.SetPosition(Vec3.new(posX, posY, posZ))
     Camera.SetRotation(Vec3.new(rotX, rotY, rotZ))
-
-    --Debug.Log("Camera pos: " .. posX .. ", " .. posY .. "," .. posZ)
-    --Debug.Log("Camera rot: " .. -rot.x .. ", " .. rot.y .. ", " .. rot.z)
-    --Debug.Log("Camera pi-units: " .. rotX .. ", " .. rotY .. ", " .. rotZ)
 end
 
 _G.globalSetCameraPosition = setCameraPosition -- Create public function.

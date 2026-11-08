@@ -16,13 +16,7 @@ function onCreate(self)
     playerPosY = player.position.y
     setPlayerStartRotation()
     updatePlayerRotation()
-
-    -- Checks if a button is pressed during load and updates animations.
-    if Input.IsHeldPlayer1(Input.UP) or Input.IsHeldPlayer1(Input.DOWN) then
-        SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
-    else
-        SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
-    end
+    setPlayerMoveAnimationFromInput()
 end
 
 function setPlayerStartRotation()
@@ -46,8 +40,8 @@ function updatePlayerRotation()
 end
 
 function onUpdate(self, dt)
-    -- Don't move while dialogue is active.
-    if isInDialogue() then return end
+    -- Don't move while UI is active.
+    if isUIActive() then return end
 
     -- Player rotate:
     if Input.IsHeldPlayer1(Input.LEFT) then
@@ -90,20 +84,27 @@ function movePlayer(isForward)
 end
 
 function onButtonPress(self, button)
-    -- Don't move while dialogue is active.
+    -- No actions when in dialogue.
     if isInDialogue() then return end
 
     -- Player animations:
     if button == Input.UP then
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
-        -- Set moveSpeed:
-        if button == Input.CROSS then moveSpeed = one / 128 end
     elseif button == Input.DOWN then
         SkinnedAnim.Play("PlayerModel", "walk", { loop = true })
-    end
-
-    if button == Input.CROSS then
+    elseif button == Input.CROSS then -- Walk faster:
         moveSpeed = one / 192
+    elseif button == Input.START then -- Pause button:
+        if isInPauseScreen() then
+            -- Resume game:
+            closePauseScreen()
+            onEnablePlayerInput()
+        else
+            -- Pause game:
+            openPauseScreen()
+            onDisablePlayerInput()
+        end
+        return
     end
 
     -- Level skip button for testing:
@@ -116,6 +117,9 @@ function onButtonPress(self, button)
 end
 
 function onButtonRelease(self, button)
+    -- No actions when in dialogue or pause.
+    if isUIActive() then return end
+
     -- Player animations:
     if button == Input.UP or button == Input.DOWN then
         SkinnedAnim.Play("PlayerModel", "idle", { loop = true })
@@ -123,8 +127,28 @@ function onButtonRelease(self, button)
         -- Walk speed.
         moveSpeed = one / 256
     end
+end
 
-    if button == Input.CROSS then
-        moveSpeed = one / 256
+-- Set player animation based on the controller input.
+function setPlayerMoveAnimationFromInput()
+    if Input.IsHeldPlayer1(Input.UP) or Input.IsHeldPlayer1(Input.DOWN) then
+        onButtonPress(self, Input.UP)
+    else
+        onButtonRelease(self, Input.UP)
     end
 end
+
+-- Global player input functions:
+
+function onEnablePlayerInput()
+    Controls.SetEnabledPlayer1(true)
+    setPlayerMoveAnimationFromInput()
+end
+
+function onDisablePlayerInput()
+    Controls.SetEnabledPlayer1(false)
+    SkinnedAnim.Stop("PlayerModel")
+end
+
+_G.onEnablePlayerInput = onEnablePlayerInput
+_G.onDisablePlayerInput = onDisablePlayerInput

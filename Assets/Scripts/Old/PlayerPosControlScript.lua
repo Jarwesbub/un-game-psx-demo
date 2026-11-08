@@ -1,9 +1,5 @@
--- Script works best with the following Camera Settings (in Unity):
--- Projection: Perspective
--- Field of View Axis: Vertical
--- Field of View: 55
+-- PLAYER POSITION CONTROL:
 
--- In Game view use 4:3 aspect ratio.
 local DEG_TO_PI = FixedPoint.new(1) / 180
 local hundredth = FixedPoint.new(1) / 100
 
@@ -16,9 +12,6 @@ function setPlayerPosition(pos, rotY)
 
     Entity.SetPosition(player, Vec3.new(posX, posY, posZ))
     Entity.SetRotationY(player, rotYPI)
-
-    --Debug.Log("setGlobalPlayerPosition: " .. posX .. ", " .. posY .. ", " .. posZ)
-    --Debug.Log("setGlobalPlayerRotation: " .. rotYPI)
 end
 
 _G.globalSetPlayerPosition = setPlayerPosition
